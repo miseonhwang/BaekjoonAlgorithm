@@ -5,7 +5,6 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
-        StringTokenizer st;
 
         // 연산의 개수 n
         int n = Integer.parseInt(br.readLine());
@@ -19,8 +18,9 @@ public class Main {
             } else if (x == 0) {
                 // 정수 x 가 0 이라면 가장 작은 값을 출력하고 큐에서 제거한다
                 // 큐가 비어 있는데 가장 작은 값을 출력하라고 한 경우에는 0을 출력한다
-                System.out.println(pQ.isEmpty() ? 0 : pQ.poll());
+                sb.append((pQ.isEmpty() ? 0 : pQ.poll()) + "\n");
             }
         }
+        System.out.println(sb);
     }
 }
